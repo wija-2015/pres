@@ -1,0 +1,74 @@
+<div class="page page-dashboard" ng-controller="ConsultBalayageSitaCtrl">
+
+    <div class="row">
+        <div class="col-sm-9">
+            {{result}}
+        </div>
+        <div class="col-sm-3 ">
+            <div class="session  mg-10 ">
+                <div class="input-group margin-bottom-sm">
+                    <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+
+                    <input class="form-control" type="text" placeholder="fa-calendar" date-range-picker id="daterange1"
+                           name="daterange1" class="form-control date-picker" type="text"
+                           ng-model="datePicker" options="{eventHandlers: {'apply.daterangepicker': applyDate}}">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="row text-center">
+                <!-- Stats -->
+                
+                
+               
+                <!-- end stats -->
+            </div>
+        </div>
+        <div class="col-lg-6">
+
+                <section class="panel panel-default panel-minimal">
+                    <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> carte</strong>
+                        <echarts id="chart5" option="option5" height="320px"></echarts>
+                    </div>
+                    <div class="panel-body">
+
+                    </div>
+                </section>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <echarts id="chart1" option="option1" height="250px"></echarts>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <echarts id="chart2" option="option2" height="250px"></echarts>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <echarts id="chart3" option="option3" height="250px"></echarts>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+  

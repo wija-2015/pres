@@ -1,0 +1,114 @@
+<div class="page" ng-controller="BalayageSitaCtrl">
+	<section class="panel panel-dark">
+		<div class="panel-heading">
+			<strong><span class="glyphicon glyphicon-th"></span> Rapport
+				Mensuel des activites des balayeuses voiries
+				<button type="submit" class="btn btn-info btn-md"
+								ng-click="generateExcel()">Excel</button>
+								<button type="submit" type="button" class="btn btn-danger btn-md"
+								ng-click="">Pdf</button>
+				<div class="myClass">
+					<form novalidate name="form" ng-submit="submit()">
+						<div class="myClass">
+							<div id="date" class="input-append" datetimez ng-model="date">
+								{{date|date:'yyyy-MM-dd'}} <input data-format="MM-yyyy"
+									type="text" id="input1" name="input1"></input> <span
+									class="add-on glyphicon glyphicon-calendar"></span>
+							</div>
+						</div>
+					</form>		
+				</div> </strong>
+
+
+		</div>
+		<div class="panel-body" ng-show="date">
+			<div class="row"></div>
+			<div class="row">
+				<div class="panel panel-primary ">
+					<div class="panel-heading">
+						<h3 class="panel-title">Rapport journalier des kilometres
+							captes</h3>
+					</div>
+
+					<div class="table-responsive">
+						<table class="table-bordered" width="100%" height="150px">
+							<thead>
+								<tr>
+									<th>Nom vehcile/Jour</th>
+									<th ng-repeat="jour in tabDaysOfMonth track by $index">{{$index
+										+1}}</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="balayage in balayagesSita">
+									<td>{{balayage.nomVehicule}}</td>
+									<td ng-repeat="kmDataBean in balayage.kmDataBeans">{{kmDataBean.kmCapte}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<br> <br>
+			<div class="row">
+				<div class="panel panel-primary ">
+					<div class="panel-heading">
+						<h3 class="panel-title">Rapport journalier des kilomètres
+							total</h3>
+					</div>
+					<div class="table-responsive">
+						<table class="table-bordered" width="100%" height="150px">
+							<thead>
+								<tr>
+									<th>Nom vehcile/Jour</th>
+									<th ng-repeat="jour in tabDaysOfMonth track by $index">{{$index
+										+1}}</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="balayage in balayagesSita">
+									<td>{{balayage.nomVehicule}}</td>
+									<td ng-repeat="kmDataBean in balayage.kmDataBeans">{{kmDataBean.kmTotal}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="table-responsive col-md-7">
+					<div class="panel panel-primary ">
+						<div class="panel-heading">
+							<h3 class="panel-title">Distance balayage avec capteur actif
+								/ Total</h3>
+						</div>
+
+						<table class="table table-striped table-bordered">
+							<thead>
+								<tr>
+									<th>Vehicule</th>
+									<th>Type</th>
+									<th>Affectation</th>
+									<th>Jours Travaillés</th>
+									<th>Km Capté</th>
+									<th>Km Total</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="sum in sumBalayagesSita">
+									<td>{{sum.nomVehicule}}</td>
+									<td>{{sum.type}}</td>
+									<td>{{sum.affectation}}</td>
+									<td>{{sum.sumTravaille}}</td>
+									<td>{{sum.sumKmCapte}}</td>
+									<td>{{sum.sumKmTotal}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+	</section>
+</div>

@@ -1,0 +1,50 @@
+[
+  {
+    data: 78,
+    axe_y: "Dessablage",
+    axe_x: "SITA BLANCA",
+    parent: 2
+  },
+  {
+    data: 114,
+    axe_y: "Désherbage",
+    axe_x: "SITA BLANCA",
+    parent: 2
+  },
+  {
+    data: 97,
+    axe_y: "Dessablage",
+    axe_x: "AVERDA Casa",
+    parent: 2
+  },
+  {
+    data: 147,
+    axe_y: "Désherbage",
+    axe_x: "AVERDA Casa",
+    parent: 2
+  },
+  {
+    data: 131,
+    axe_y: "Corbeilles Publics et/ou de la plage",
+    axe_x: "SITA BLANCA",
+    parent: 2
+  },
+  {
+    data: 53,
+    axe_y: "Corbeilles Publics et/ou de la plage",
+    axe_x: "AVERDA Casa",
+    parent: 2
+  },
+  {
+    data: 651,
+    axe_y: "Balayage Manuel",
+    axe_x: "SITA BLANCA",
+    parent: 2
+  },
+  {
+    data: 743,
+    axe_y: "Balayage Manuel",
+    axe_x: "AVERDA Casa",
+    parent: 2
+  }
+]

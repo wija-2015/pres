@@ -1,0 +1,34 @@
+div.myClass {
+    float:right;
+    clear:both;
+	top: 0; 
+	right: 0; 
+}
+input#input1
+{
+	    height: 30px;
+}
+span.glyphicon.glyphicon-calendar
+{	
+	width:42 px;
+	height: 30px;
+	color:#0000FF;
+}
+div#date.input-append.ng-pristine.ng-untouched.ng-valid
+{
+	top: 0; 
+}
+.wijdaneModal
+{
+	width:700px;
+	height: 600px;
+}
+div.myMenu {
+    float:right;
+    clear:both;
+	top: 0; 
+	right: 0; 
+}
+.modal-backdrop.in{
+display: none;
+}

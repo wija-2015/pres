@@ -1,0 +1,62 @@
+[
+    {
+        "data": 75,
+        "axe_y": "Collecte DE",
+        "axe_x": "AVERDA Casa",
+        "parent": 1
+    },
+    {
+        "data": 72,
+        "axe_y": "Collecte DE",
+        "axe_x": "SITA BLANCA",
+        "parent": 1
+    },
+    {
+        "data": 157,
+        "axe_y": "Collecte DI",
+        "axe_x": "SITA BLANCA",
+        "parent": 1
+    },
+    {
+        "data": 224,
+        "axe_y": "Conteneurs",
+        "axe_x": "SITA BLANCA",
+        "parent": 1
+    },
+    {
+        "data": 387,
+        "axe_y": "Collecte DM",
+        "axe_x": "AVERDA Casa",
+        "parent": 1
+    },
+    {
+        "data": 248,
+        "axe_y": "Collecte DV",
+        "axe_x": "SITA BLANCA",
+        "parent": 1
+    },
+    {
+        "data": 706,
+        "axe_y": "Collecte DM",
+        "axe_x": "SITA BLANCA",
+        "parent": 1
+    },
+    {
+        "data": 366,
+        "axe_y": "Conteneurs",
+        "axe_x": "AVERDA Casa",
+        "parent": 1
+    },
+    {
+        "data": 396,
+        "axe_y": "Collecte DV",
+        "axe_x": "AVERDA Casa",
+        "parent": 1
+    },
+    {
+        "data": 282,
+        "axe_y": "Collecte DI",
+        "axe_x": "AVERDA Casa",
+        "parent": 1
+    }
+]

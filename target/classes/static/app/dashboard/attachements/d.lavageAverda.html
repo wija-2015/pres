@@ -1,0 +1,31 @@
+<div class="page" ng-controller="AttachementAverdaCtrl">
+    <section class="panel panel-default">
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Lavage Mécanisé Averda</strong></div>
+        <div class="panel-body">
+
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+							<th>Id vehicule</th>                          
+							<th>Nom vehicule</th>
+							<th>Immatriculation</th>
+                            <th>Distance (Km)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="att in attachementsLavageAverda">
+						   <td>{{att.dateJour |date:'yyyy-MM-dd'}}</td>		                   
+		                   <td>{{att.idVehicule || empty}}</td>
+		                   <td><span ng-repeat="v in vehicules"  ng-if="v.id==att.idVehicule">{{v.nom}}</span></td>
+						   <td><span ng-repeat="v in vehicules"  ng-if="v.id==att.idVehicule">{{v.immatriculation}}</span></td>
+		                   <td>{{att.km || empty}}</td>
+		                </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
+

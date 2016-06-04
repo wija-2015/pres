@@ -1,0 +1,225 @@
+<header class="top-header clearfix">
+
+    <!-- Logo -->
+    <div class="logo"
+         ng-class="{ 'bg-dark': ['11'].indexOf(main.skin) >= 0,
+                     'bg-white':['21','33'].indexOf(main.skin) >= 0,
+                     'bg-primary': ['12','22','32'].indexOf(main.skin) >= 0,
+                     'bg-success': ['13','23','33'].indexOf(main.skin) >= 0,
+                     'bg-info-alt': ['14','24','34'].indexOf(main.skin) >= 0,
+                     'bg-warning': ['15','25','35'].indexOf(main.skin) >= 0,
+                     'bg-danger': ['16','26','36'].indexOf(main.skin) >= 0,
+                    }">
+        <a href="#/">
+            <span >
+                <img src="images/Logos/1.png">
+            </span>
+            <span class="logo-text">
+                 <img src="images/Logos/2.png">
+            </span>
+
+        </a>
+    </div>
+
+    <!-- needs to be put after logo to make it work -->
+    <div class="menu-button" toggle-off-canvas>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </div>
+
+    <div class="top-nav">
+        <ul class="nav-left list-unstyled">
+            <li>
+                <a href="#/" data-toggle-nav-collapsed-min
+                             class="toggle-min">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </li>
+
+           
+        </ul>
+
+
+        <ul class="nav-left pull-right list-unstyled">
+            <li class="dropdown text-normal nav-profile" uib-dropdown is-open="status.isopenProfile">
+                <a href="javascript:;" uib-dropdown-toggle ng-disabled="disabled">
+                    <img src="images/g1.jpg" alt="" class="img-circle img30_30">
+                    <span class="hidden-xs">
+                        <span data-translate="LISA"></span>
+                    </span>
+                </a>
+                <ul class="dropdown-menu with-arrow dropdown-menu-scaleIn" uib-dropdown-menu>
+                    <li>
+                        <a ui-sref="profile">
+                            <i class="fa fa-user"></i>
+                            <span data-translate="MY_PROFILE"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="tasks">
+                            <i class="fa fa-tasks"></i>
+                            <span data-translate="MY_TASKS"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="lock-screen">
+                            <i class="fa fa-lock"></i>
+                            <span data-translate="LOCK"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="signin">
+                            <i class="fa fa-sign-out"></i>
+                            <span data-translate="LOG_OUT"></span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown" uib-dropdown is-open="status.isopenComment">
+                <a href="javascript:;" class="dropdown-toggle bg-orange" uib-dropdown-toggle ng-disabled="disabled">
+                    <i class="fa fa-comment-o"></i>
+                    <span class="badge badge-info">2</span>
+                </a>
+                <div class="dropdown-menu pull-right with-arrow panel panel-default dropdown-menu-scaleIn">
+                    <div class="panel-heading">
+                        You have 2 messages.
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="media-left media-icon">
+                                    <span class="btn-icon btn-icon-round btn-info"><i class="fa fa-comment-o"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">Jane sent you a message</span>
+                                    <span class="text-muted">3 hours ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="media-left media-icon">
+                                    <span class="btn-icon btn-icon-round btn-danger"><i class="fa fa-comment-o"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">Lynda sent you a mail</span>
+                                    <span class="text-muted">9 hours ago</span>
+                                </div>
+                            </a>
+                        </li>                       
+                    </ul>
+                    <div class="panel-footer">
+                        <a href="javascript:;">Show all messages.</a>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown" uib-dropdown is-open="status.isopenEmail">
+                <a href="javascript:;" uib-dropdown-toggle ng-disabled="disabled" class="bg-warning">
+                    <i class="fa fa-envelope"></i>
+                    <span class="badge badge-danger">3</span>
+                </a>
+                <div class="dropdown-menu with-arrow panel pull-right panel-default dropdown-menu-scaleIn" uib-dropdown-menu>
+                    <div class="panel-heading">
+                        You have 3 mails.
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="media-left media-icon">
+                                    <span class="btn-icon btn-icon-round btn-warning"><i class="fa fa-envelope"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">Lisa sent you a mail</span>
+                                    <span class="text-muted block">2min ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="media-left media-icon">
+                                    <span class="btn-icon btn-icon-round btn-info"><i class="fa fa-envelope"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">Jane sent you a mail</span>
+                                    <span class="text-muted">3 hours ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="media-left media-icon">
+                                    <span class="btn-icon btn-icon-round btn-success"><i class="fa fa-envelope"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">Lynda sent you a mail</span>
+                                    <span class="text-muted">9 hours ago</span>
+                                </div>
+                            </a>
+                        </li>                       
+                    </ul>
+                    <div class="panel-footer">
+                        <a href="#/mail/inbox">Show all mails.</a>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown" uib-dropdown is-open="status.isopenBell">
+                <a href="javascript:;" uib-dropdown-toggle ng-disabled="disabled" class="bg-success">
+                    <i class="fa fa-bell"></i>
+                    <span class="badge badge-info">3</span>
+                </a>
+                <div class="dropdown-menu with-arrow panel pull-right panel-default dropdown-menu-scaleIn" uib-dropdown-menu>
+                    <div class="panel-heading">
+                        You have 3 notifications.
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="media-left media-icon">
+                                    <span class="btn-icon btn-icon-round btn-success"><i class="fa fa-bell"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">New tasks needs to be done</span>
+                                    <span class="text-muted block">2min ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="media-left media-icon">
+                                    <span class="btn-icon btn-icon-round btn-info"><i class="fa fa-bell"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">Change your password</span>
+                                    <span class="text-muted">3 hours ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="media-left media-icon">
+                                    <span class="btn-icon btn-icon-round btn-danger"><i class="fa fa-bell"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">New feature added</span>
+                                    <span class="text-muted">9 hours ago</span>
+                                </div>
+                            </a>
+                        </li>                       
+                    </ul>
+                    <div class="panel-footer">
+                        <a ui-sref="inbox">Show all notifications.</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <a ui-sref="tasks" class="bg-info">
+                    <i class="fa fa-tasks"></i>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+</header>
